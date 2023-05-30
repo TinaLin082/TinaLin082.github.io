@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block {
+            background-color: #272626;
+            height: 60px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .Num {
+            font-size: 18px;
+            color: white;
+            width: 100%;
+            height: 50px;
+            line-height: 1.3;
+            margin-left: 20px;
+            font-family: Lato, sans-serif;
+        }
+
+        .Num img {
+            width: 18px;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1500px;
+            width: 100%;
+            height: 100%;
+            justify-content: space-between;
+        }
+
+        .containewordline {
+            display: flex;
+            padding: 0px 0px 0px 200px;
+
+        }
+
+        .containewordlineR {
+            padding: 0px 0px 0px 80px;
+        }
+
+        .containercat {
+            padding: 0px 0px 0px 200px;
+            height: 100px;
+            margin: 0 auto;
+
+        }
+
+        .containerAboutus {
+            display: flex;
+            padding: 0px 0px 0px 10px;
+            height: 50px;
+            width: 100%;
+            justify-content: center;
+        }
+
+
+        .containerword {
+            width: 100%;
+            height: 180px;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .containerhow {
+            display: flex;
+        }
+
+        .icon {
+            width: 100%;
+            height: 100px;
+        }
+
+        .icon ul {
+            list-style: none;
+            display: flex;
+            line-height: 5px;
+            float: right;
+        }
+
+        .icon img {
+            width: 25px;
+            height: 25px;
+            margin: 2px;
+        }
+
+        .Whiteblock {
+
+            background-color: white;
+            height: 109px;
+            display: flex;
+        }
+
+        .Aniloveimg {
+            width: 55px;
+            height: 62px;
+            margin: 10px;
+            margin-top: 25px;
+        }
+
+        .Anilove {
+
+            font-size: 55px;
+            color: #524d4d;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 10px;
+            margin-top: 25px;
+            height: 100px;
+        }
+
+        .Donatenow {
+            display: inline-block;
+            margin-top: 25px;
+            width: 150px;
+            height: 32px;
+            border: 2px solid;
+            background-color: #ffffff;
+            text-align: center;
+            color: #ff9933;
+            padding: 15px 0px 0px 0px;
+            text-decoration: none;
+            font-style: normal;
+            font-family: Lato, sans-serif;
+
+        }
+
+        .Donatenow:hover {
+
+            background-color: #7abee9;
+            border-color: #7abee9;
+            color: white;
+        }
+
+
+        .meau {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 65%;
+            height: 100px;
+        }
+
+        .meau ul {
+            font-size: 18px;
+            font-weight: lighter;
+            list-style: none;
+            display: flex;
+            margin-top: 6px;
+        }
+
+        .meau li {
+            letter-spacing: 1px;
+            padding: 25px;
+        }
+
+        .catimg {
+            width: 100%;
+            height: 500px;
+            background-image: url(../day01_Hw2/img/asset\ 4.jpeg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+
+        .catwords p {
+            font-family: 'Lato', sans-serif;
+            color: #535353;
+            font-size: 20px;
+            margin-left: 50px;
+            line-height: 0.2;
+        }
+
+        .catwords h1 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-style: normal;
+            color: #7abee9;
+            font-size: 80px;
+            margin-left: 50px;
+            line-height: 0.2;
+        }
+
+        .catwords h2 {
+            font-family: 'Lato', sans-serif;
+            color: #535353;
+            font-size: 50px;
+            font-style: normal;
+            margin-left: 50px;
+            line-height: 0.5;
+        }
+
+        .box {
+            position: relative;
+            padding-top: 25px;
+            display: block;
+
+        }
+
+        .buttom {
+            background-color: #ff9933;
+            width: 200px;
+            height: 60px;
+            margin-left: 50px;
+        }
+
+        .buttom:hover {
+
+            background-color: #060606;
+            border-color: #000000;
+            color: white;
+        }
+
+        .buttom a {
+            text-decoration: none;
+        }
+
+        .buttom h4 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            padding: 23px 0px 45px 0px;
+
+        }
+
+        .Aboutus {
+            height: 800px;
+        }
+
+        .AboutusWord {
+            float: left;
+            margin: 100px 0px 0px 0px;
+        }
+
+        .Aboutusimg {
+
+            height: 500px;
+        }
+
+        .AboutusWord h2 {
+            font-weight: 700;
+            font-style: normal;
+            font-family: 'Lato', sans-serif;
+            color: #535353;
+            font-size: 50px;
+            line-height: 1.2;
+            letter-spacing: 0px;
+        }
+
+        .AboutusWord h3 {
+            font-weight: 400;
+            font-style: normal;
+            font-family: 'Lato', sans-serif;
+            color: #7abee9;
+            font-size: 30px;
+            line-height: 1.5;
+            letter-spacing: 0px;
+        }
+
+        .AboutusWord p {
+            font-weight: 400;
+            font-style: normal;
+            font-family: 'Lato', sans-serif;
+            color: #8d8d8d;
+            font-size: 14px;
+            line-height: 1.5;
+            letter-spacing: 0px
+        }
+
+        .learnbuttom {
+            background-color: #ff9933;
+            width: 200px;
+            height: 60px;
+
+        }
+
+        .learnbuttom:hover {
+
+            background-color: #060606;
+            border-color: #000000;
+            color: white;
+        }
+
+        .learnbuttom a {
+            text-decoration: none;
+        }
+
+        .learnbuttom h4 {
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            padding: 23px 0px 45px 0px;
+        }
+
+        .Howblock {
+            background-color: #f9f9f9;
+            height: 1000px;
+            width: 100%;
+        }
+
+        .containerword h2 {
+            font-weight: 700;
+            font-style: normal;
+            font-family: 'Lato', sans-serif;
+            color: #535353;
+            font-size: 50px;
+            line-height: 0.5;
+            padding-top: 60px;
+        }
+
+        .containerword p {
+            font-weight: 400;
+            font-style: normal;
+            font-family: 'Lato', sans-serif;
+            color: #7abee9;
+            font-size: 30px;
+            line-height: 0.1;
+        }
+
+        .containerhow {
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            padding: 20px;
+        }
+
+        .containerhow img:hover {
+            filter: brightness(70%);
+        }
+
+        .containerhow img {
+
+            width: 100%;
+            text-align: center;
+        }
+
+        .howimg1 {
+
+            width: 400px;
+            height: 650px;
+            text-align: center;
+            margin: 15px
+        }
+
+        .howimg2 {
+            width: 400px;
+            height: 650px;
+            text-align: center;
+            margin: 15px
+        }
+
+        .howimg3 {
+            width: 400px;
+            height: 650px;
+            text-align: center;
+            margin: 15px
+        }
+
+        .howimgword1 {
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            position: relative;
+            bottom: 150px;
+
+        }
+
+        .howimgword2 {
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            position: relative;
+            bottom: 150px;
+
+        }
+
+        .howimgword3 {
+            width: 400px;
+            height: 50px;
+            text-align: center;
+            position: relative;
+            bottom: 150px;
+
+        }
+
+        .containerhow a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 50px;
+            font-family: 'Lato', sans-serif;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="block">
+        <div class="container">
+            <div class="containewordline">
+                <div class="Num">
+                    <p> <img src="../day01_Hw2/img/tel.png">Toll-free: (123) 456-7890</p>
+                </div>
+            </div>
+            <div class="containewordline">
+                <div class="icon">
+                    <ul>
+                        <li><img src="../day01_Hw2/img/twitter-01.png" alt=""></li>
+                        <li><img src="../day01_Hw2/img/fb-01.png" alt=""></li>
+                        <li><img src="../day01_Hw2/img/pinterst2-01.png" alt=""></li>
+                        <li><img src="../day01_Hw2/img/linked-01.png" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Whiteblock">
+        <div class="container">
+            <div class="containewordline">
+                <div class="Aniloveimg">
+                    <img src="../day01_Hw2/img/asset 0.png" alt="">
+                </div>
+                <div class="Anilove">
+                    <b>Anilove</b>
+                </div>
+            </div>
+            <div class="containewordline">
+                <div class="meau">
+                    <ul>
+                        <li>
+                            <p>Home</p>
+                        </li>
+                        <li>
+                            <p>About</p>
+                        </li>
+                        <li>
+                            <p>Events</p>
+                        </li>
+                        <li>
+                            <p>News</p>
+                        </li>
+                        <li>
+                            <p>Contacts</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="containewordlineR">
+                <a href="#" class="Donatenow">DONATE NOW!</a>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="catimg">
+        <div class="catwords">
+            <div class="containercat"></div>
+            <div class="containercat">
+                <div class="containewordline"></div>
+                <h2><strong> Animals Need</strong></h2>
+                <h1> YOUR Help!</h1>
+                <p>You can chip in with money & effort!</p>
+                <div class="box"></div>
+                <div class="buttom">
+                    <a href="">
+                        <h4>DONATE NOW!</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="Aboutus">
+        <div class="container">
+            <div class="containerAboutus">
+                <div class="Aboutusimg">
+                    <img src="../day01_Hw2/img/asset 1.jpeg" alt="">
+                </div>
+            </div>
+            <div class="containerAboutus">
+                <div class="AboutusWord">
+                    <h2>About Us</h2>
+                    <h3>What Makes Us Care About Pets?</h3>
+                    <P>
+                        If it wasn’t for our founder’s childhood spent on a ranch in northern Texas,
+                        surrounded by domestic animals and pets all the time till she went to college – there
+                        might have been no Anilove animal shelter now. So as soon as she graduated with her
+                        Veterinary degree 12 years ago, she already knew what she will be doing for a living.
+                    <p> All in all, with thousands of animals saved off the streets and cared for every year,
+                        we hope to encourage much more pet adoptions to happen!</P>
+                    <div class="box"></div>
+                    <div class="learnbuttom">
+                        <a href="">
+                            <h4>LEARN MORE</h4>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="Howblock">
+
+        <div class="containerword">
+            <h2>How You Can Help</h2>
+            <p>There Are Countless Ways You Can Join In & Help Us!</p>
+        </div>
+        <div class="containerhow">
+            <div class="howimg1">
+                <img src="../day01_Hw2/img/asset 5.jpeg" alt="">
+                <div class="howimgword1">
+                    <a href="">
+                        <p>Volunteer
+                    </a></p>
+                </div>
+            </div>
+            <div class="howimg2">
+                <img src="../day01_Hw2/img/asset 6.jpeg" alt="">
+                <div class="howimgword2">
+                    <a href="">
+                        <p>Adopt
+                    </a></p>
+                </div>
+            </div>
+            <div class="howimg3">
+                <img src="../day01_Hw2/img/asset 7.jpeg" alt="">
+                <div class="howimgword3">
+                    <a href="">
+                        <p>Sponsor
+                    </a></p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>
