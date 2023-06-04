@@ -5,546 +5,401 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;800&family=Josefin+Sans:ital,wght@1,300&family=Nunito+Sans:wght@200&family=Poppins:wght@200&family=Roboto:wght@700&family=Ubuntu:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <title>Document</title>
     <style>
-        .block {
-            background-color: #272626;
-            height: 60px;
-            display: flex;
-            justify-content: space-between;
+        * {
+            margin: 0;
+            padding: 0;
         }
 
-        .Num {
-            font-size: 18px;
+        /* .list{
+            width:100%;
+        } */
+        .bkblock {
+            background-color: black;
+
+        }
+
+        .outer {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             color: white;
-            width: 100%;
-            height: 50px;
-            line-height: 1.3;
-            margin-left: 20px;
-            font-family: Lato, sans-serif;
         }
 
-        .Num img {
-            width: 18px;
+        .bkblock .text {
+            margin: 15px;
         }
 
-        .container {
-            display: flex;
-            max-width: 1500px;
-            width: 100%;
-            height: 100%;
-            justify-content: space-between;
+        .bkblock .text i {
+            color: #fa0;
+            margin: 5px;
         }
 
-        .containewordline {
-            display: flex;
-            padding: 0px 0px 0px 200px;
-
+        .bkblock .text a {
+            text-decoration: none;
+            color: white;
+            font-family: 'Lato', sans-serif;
+            font-size: 115%;
+            font-style: normal;
         }
 
-        .containewordlineR {
-            padding: 0px 0px 0px 80px;
-        }
-
-        .containercat {
-            padding: 0px 0px 0px 200px;
-            height: 100px;
-            margin: 0 auto;
-
-        }
-
-        .containerAboutus {
-            display: flex;
-            padding: 0px 0px 0px 10px;
-            height: 50px;
-            width: 100%;
-            justify-content: center;
-        }
-
-
-        .containerword {
-            width: 100%;
-            height: 180px;
-            justify-content: center;
-            text-align: center;
-        }
-
-        .containerhow {
+        .bkblock ul {
             display: flex;
         }
 
-        .icon {
-            width: 100%;
-            height: 100px;
-        }
-
-        .icon ul {
+        .bkblock li {
             list-style: none;
-            display: flex;
-            line-height: 5px;
-            float: right;
-        }
-
-        .icon img {
+            text-align: center;
             width: 25px;
             height: 25px;
-            margin: 2px;
-        }
-
-        .Whiteblock {
-
             background-color: white;
-            height: 109px;
-            display: flex;
+            border-radius: 50%;
+            margin: 4px;
         }
 
-        .Aniloveimg {
-            width: 55px;
-            height: 62px;
-            margin: 10px;
-            margin-top: 25px;
+        .bkblock i {
+            padding-top: 4px;
+            color: black;
+        }
+
+        .bkblock li:hover {
+            background-color: #fa0;
         }
 
         .Anilove {
-
-            font-size: 55px;
-            color: #524d4d;
-            font-family: 'Times New Roman', Times, serif;
-            margin: 10px;
-            margin-top: 25px;
-            height: 100px;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            margin: auto;
+            align-items: center;
         }
 
-        .Donatenow {
-            display: inline-block;
-            margin-top: 25px;
-            width: 150px;
-            height: 32px;
-            border: 2px solid;
-            background-color: #ffffff;
-            text-align: center;
-            color: #ff9933;
-            padding: 15px 0px 0px 0px;
+
+        .Aniblock {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px;
+            align-items: center;
+        }
+
+        .Aniblock a {
             text-decoration: none;
-            font-style: normal;
-            font-family: Lato, sans-serif;
-
+            margin: 10px;
+            font-size: 125%;
+            color:  #535353;
         }
 
-        .Donatenow:hover {
+        .Anilove .item {
+            margin: auto;
+        }
 
+        .Anilove .item li {
+            list-style: none;
+        }
+
+        .Anilove li a {
+            font-family: 'Lato', sans-serif;
+            text-decoration: none;
+            color:  #535353;
+            margin: 20px;
+            font-size: 25px;
+        }
+
+        .DonateNow {
+            font-family: 'Lato', sans-serif;
+            padding: 15px 30px;
+            border: 2px solid #fa0;
+            text-decoration: none;
+            color: #fa0;
+            text-transform: uppercase;
+        }
+
+        .DonateNow:hover {
             background-color: #7abee9;
             border-color: #7abee9;
-            color: white;
+            color: #fff;
         }
 
-
-        .meau {
-            font-family: Arial, Helvetica, sans-serif;
-            width: 65%;
-            height: 100px;
-        }
-
-        .meau ul {
-            font-size: 18px;
-            font-weight: lighter;
-            list-style: none;
-            display: flex;
-            margin-top: 6px;
-        }
-
-        .meau li {
-            letter-spacing: 1px;
-            padding: 25px;
-        }
-
-        .catimg {
-            width: 100%;
-            height: 500px;
+        .catouter {
+            margin: auto;
+            align-items: center;
             background-image: url(./img/asset\ 4.jpeg);
-            background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            height: 600px;
         }
 
+        .cattext {
 
-        .catwords p {
+            max-width: 1200px;
+            height: 200px;
+            padding: 200px;
             font-family: 'Lato', sans-serif;
-            color: #535353;
-            font-size: 20px;
-            margin-left: 50px;
-            line-height: 0.2;
+            margin: auto;
         }
 
-        .catwords h1 {
-            font-family: 'Lato', sans-serif;
-            font-weight: 700;
-            font-style: normal;
+        .cattext h1 {
             color: #7abee9;
-            font-size: 80px;
-            margin-left: 50px;
-            line-height: 0.2;
-        }
-
-        .catwords h2 {
-            font-family: 'Lato', sans-serif;
-            color: #535353;
-            font-size: 50px;
-            font-style: normal;
-            margin-left: 50px;
-            line-height: 0.5;
-        }
-
-        .box {
-            position: relative;
-            padding-top: 25px;
-            display: block;
-
-        }
-
-        .buttom {
-            background-color: #ff9933;
-            width: 200px;
-            height: 60px;
-            margin-left: 50px;
-        }
-
-        .buttom:hover {
-
-            background-color: #060606;
-            border-color: #000000;
-            color: white;
-        }
-
-        .buttom a {
-            text-decoration: none;
-        }
-
-        .buttom h4 {
-            font-family: 'Lato', sans-serif;
-            font-weight: 700;
-            color: white;
-            text-align: center;
-            padding: 23px 0px 45px 0px;
-
-        }
-
-        .Aboutus {
-            height: 800px;
-        }
-
-        .AboutusWord {
-            float: left;
-            margin: 100px 0px 0px 0px;
-        }
-
-        .Aboutusimg {
-
-            height: 500px;
-        }
-
-        .AboutusWord h2 {
-            font-weight: 700;
-            font-style: normal;
-            font-family: 'Lato', sans-serif;
-            color: #535353;
-            font-size: 50px;
+            font-size: 60px;
             line-height: 1.2;
-            letter-spacing: 0px;
         }
 
-        .AboutusWord h3 {
-            font-weight: 400;
-            font-style: normal;
-            font-family: 'Lato', sans-serif;
-            color: #7abee9;
-            font-size: 30px;
-            line-height: 1.5;
-            letter-spacing: 0px;
-        }
-
-        .AboutusWord p {
-            font-weight: 400;
-            font-style: normal;
-            font-family: 'Lato', sans-serif;
-            color: #8d8d8d;
-            font-size: 14px;
-            line-height: 1.5;
-            letter-spacing: 0px
-        }
-
-        .learnbuttom {
-            background-color: #ff9933;
-            width: 200px;
-            height: 60px;
-
-        }
-
-        .learnbuttom:hover {
-
-            background-color: #060606;
-            border-color: #000000;
-            color: white;
-        }
-
-        .learnbuttom a {
-            text-decoration: none;
-        }
-
-        .learnbuttom h4 {
-            font-family: 'Lato', sans-serif;
-            font-weight: 700;
-            color: white;
-            text-align: center;
-            padding: 23px 0px 45px 0px;
-        }
-
-        .Howblock {
-            background-color: #f9f9f9;
-            height: 1000px;
-            width: 100%;
-        }
-
-        .containerword h2 {
-            font-weight: 700;
-            font-style: normal;
-            font-family: 'Lato', sans-serif;
+        .cattext h2 {
             color: #535353;
-            font-size: 50px;
-            line-height: 0.5;
-            padding-top: 60px;
+            font-size: 40px;
+            line-height: 1.2;
         }
 
-        .containerword p {
-            font-weight: 400;
-            font-style: normal;
+        .cattext .catbtn {
+            text-decoration: none;
+            line-height: 7;
+            background-color: #fa0;
+            padding: 18px 40px;
+            color: #fff;
+        }
+
+        .catbtn:hover {
+            background-color: black;
+        }
+
+        .AbousUsouter {
+            margin: auto;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+        }
+
+        .Aboutuspic {
+            width: 50%
+        }
+
+        .Aboutuspic img {
+            width: 100%
+        }
+
+        .AbousUsouter .text {
             font-family: 'Lato', sans-serif;
+            width: 50%;
+            line-height: 1.2;
+            color: #535353;
+        }
+
+        .AbousUsouter .text h1 {
+            color: #535353;
+            line-height: 2;
+        }
+
+        .AbousUsouter .text h3 {
             color: #7abee9;
+            line-height: 2;
+            margin-bottom: 20px;
             font-size: 30px;
-            line-height: 0.1;
+            font-weight: 400;
+
+        }
+
+        .Learnbtn {
+            text-decoration: none;
+            margin-top: 50px;
+            display: inline-block;
+            background-color: #fa0;
+            padding: 18px 40px;
+            color: #fff;
+        }
+
+        .Learnbtn:hover {
+            background-color: black;
+        }
+
+        .containerfuild {
+            background-color: #f9f9f9;
         }
 
         .containerhow {
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px;
+            text-align: center;
+            font-family: 'Lato', sans-serif;
         }
 
-        .containerhow img:hover {
+        .containerhow .howtext {
+            font-size: 20px;
+            margin: 10px;
+            color: #535353;
+        }
+
+        .containerhow .howtextus {
+            font-size: 20px;
+            margin: 10px 0px 30px;
+            color: #7abee9;
+            font-family: 'Nunito Sans', sans-serif;
+        }
+
+        .howcard {
+            width: 1200px;
+            height: 450px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+
+        .howcard1:hover a {
+            color: #fa0;
+        }
+
+        .howcard2:hover a {
+            color: #fa0;
+        }
+
+        .howcard3:hover a {
+            color: #fa0;
+        }
+
+        .howcard1:hover {
             filter: brightness(70%);
         }
 
-        .containerhow img {
-
-            width: 100%;
-            text-align: center;
+        .howcard2:hover {
+            filter: brightness(70%);
         }
 
-        .howimg1 {
-
-            width: 400px;
-            height: 650px;
-            text-align: center;
-            margin: 15px
+        .howcard3:hover {
+            filter: brightness(70%);
         }
 
-        .howimg2 {
-            width: 400px;
-            height: 650px;
-            text-align: center;
-            margin: 15px
+        .howcard1 {
+            background-image: url(./img/asset\ 5.jpeg);
+            background-size: cover;
+            width: 380px;
+            margin: 10px;
         }
 
-        .howimg3 {
-            width: 400px;
-            height: 650px;
-            text-align: center;
-            margin: 15px
+        .howcard2 {
+            background-image: url(./img/asset\ 6.jpeg);
+            background-size: cover;
+            width: 380px;
+            margin: 10px;
         }
 
-        .howimgword1 {
-            width: 400px;
-            height: 50px;
-            text-align: center;
-            position: relative;
-            bottom: 150px;
-
+        .howcard3 {
+            background-image: url(./img/asset\ 7.jpeg);
+            background-size: cover;
+            width: 380px;
+            margin: 10px;
         }
 
-        .howimgword2 {
-            width: 400px;
-            height: 50px;
-            text-align: center;
-            position: relative;
-            bottom: 150px;
-
-        }
-
-        .howimgword3 {
-            width: 400px;
-            height: 50px;
-            text-align: center;
-            position: relative;
-            bottom: 150px;
-
-        }
-
-        .containerhow a {
-            color: #ffffff;
+        .howcard a {
+            display: block;
+            color: #fff;
             text-decoration: none;
             font-weight: 400;
             font-style: normal;
-            font-size: 50px;
+            font-size: 30px;
             font-family: 'Lato', sans-serif;
-
+            margin-top: 360px;
         }
     </style>
 </head>
 
 <body>
-
-    <div class="block">
-        <div class="container">
-            <div class="containewordline">
-                <div class="Num">
-                    <p> <img src="./img/tel.png">Toll-free: (123) 456-7890</p>
+    <div class="container">
+        <div class="bkblock">
+            <div class="outer">
+                <div class="text">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#">Toll-free: (123) 456-7890</a>
                 </div>
-            </div>
-            <div class="containewordline">
-                <div class="icon">
-                    <ul>
-                        <li><img src="./img/twitter-01.png" alt=""></li>
-                        <li><img src="./img/fb-01.png" alt=""></li>
-                        <li><img src="./img/pinterst2-01.png" alt=""></li>
-                        <li><img src="./img/linked-01.png" alt=""></li>
-                    </ul>
-                </div>
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                </ul>
             </div>
         </div>
-    </div>
-
-    <div class="Whiteblock">
-        <div class="container">
-            <div class="containewordline">
-                <div class="Aniloveimg">
-                    <img src="./img/asset 0.png" alt="">
-                </div>
-                <div class="Anilove">
-                    <b>Anilove</b>
-                </div>
-            </div>
-            <div class="containewordline">
-                <div class="meau">
-                    <ul>
-                        <li>
-                            <p>Home</p>
-                        </li>
-                        <li>
-                            <p>About</p>
-                        </li>
-                        <li>
-                            <p>Events</p>
-                        </li>
-                        <li>
-                            <p>News</p>
-                        </li>
-                        <li>
-                            <p>Contacts</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="containewordlineR">
-                <a href="#" class="Donatenow">DONATE NOW!</a>
-
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="catimg">
-        <div class="catwords">
-            <div class="containercat"></div>
-            <div class="containercat">
-                <div class="containewordline"></div>
-                <h2><strong> Animals Need</strong></h2>
-                <h1> YOUR Help!</h1>
-                <p>You can chip in with money & effort!</p>
-                <div class="box"></div>
-                <div class="buttom">
+        <div class="whiteblock">
+            <div class="Anilove">
+                <div class="Aniblock">
+                    <a href=""><img src="./img/asset 0.png" alt=""> </a>
                     <a href="">
-                        <h4>DONATE NOW!</h4>
+                        <h1>Anilove </h1>
                     </a>
                 </div>
+                <nav class="item">
+                    <ul>
+                        <li>
+                            <a href="">Home</a>
+                            <a href="">About</a>
+                            <a href="">Events</a>
+                            <a href="">News</a>
+                            <a href="">Contacts</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="" class=DonateNow> Donate Now! </a>
             </div>
         </div>
-    </div>
-    <div class="Aboutus">
-        <div class="container">
-            <div class="containerAboutus">
-                <div class="Aboutusimg">
-                    <img src="./img/asset 1.jpeg" alt="">
-                </div>
+        <div class="catouter">
+            <div class="cattext">
+                <h2>Animals Need</h2>
+                <h1>YOUR Help!</h1>
+                <p>You can chip in with money & effort!</p>
+                <a href="#" class="catbtn"> Donate Now!</a>
             </div>
-            <div class="containerAboutus">
-                <div class="AboutusWord">
-                    <h2>About Us</h2>
-                    <h3>What Makes Us Care About Pets?</h3>
-                    <P>
-                        If it wasn’t for our founder’s childhood spent on a ranch in northern Texas,
-                        surrounded by domestic animals and pets all the time till she went to college – there
-                        might have been no Anilove animal shelter now. So as soon as she graduated with her
-                        Veterinary degree 12 years ago, she already knew what she will be doing for a living.
-                    <p> All in all, with thousands of animals saved off the streets and cared for every year,
-                        we hope to encourage much more pet adoptions to happen!</P>
-                    <div class="box"></div>
-                    <div class="learnbuttom">
-                        <a href="">
-                            <h4>LEARN MORE</h4>
-                        </a>
+        </div>
+
+        <div class="AbousUsouter">
+            <div class="Aboutuspic">
+                <img src="./img/asset 1.jpeg" alt="">
+            </div>
+            <div class="text">
+                <h1>About Us</h1>
+                <h3>What Makes Us Care About Pets?</h3>
+                <p>If it wasn’t for our founder’s childhood spent on a ranch in northern Texas, surrounded by domestic
+                    animals and pets all the time till she went to college – there might have been no Anilove animal
+                    shelter now. So as soon as she graduated with her Veterinary degree 12 years ago, she already knew
+                    what she will be doing for a living.
+                    <br></br>be All in all, with thousands of animals saved off the streets and cared for every year, we
+                    hope to
+                    encourage much more pet adoptions to happen!
+                </p>
+                <a href="#" class="Learnbtn">LEARN MORE</a>
+            </div>
+        </div>
+        <div class="containerfuild">
+            <div class="containerhow">
+                <div class="howtext">
+                    <h1>How You Can Help</h1>
+                </div>
+                <div class="howtextus">
+                    <h2>There Are Countless Ways You Can Join In & Help Us!</h2>
+                </div>
+                <div class="howcard">
+                    <div class="howcard1">
+                        <a href="#" class=cardword1>Volunteer</a>
+                    </div>
+                    <div class="howcard2">
+                        <a href="#" class=cardword2>Adopt</a>
+                    </div>
+                    <div class="howcard3">
+                        <a href="#" class=cardword3>Sponsor</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
-
-    <div class="Howblock">
-
-        <div class="containerword">
-            <h2>How You Can Help</h2>
-            <p>There Are Countless Ways You Can Join In & Help Us!</p>
-        </div>
-        <div class="containerhow">
-            <div class="howimg1">
-                <img src="./img/asset 5.jpeg" alt="">
-                <div class="howimgword1">
-                    <a href="">
-                        <p>Volunteer
-                    </a></p>
-                </div>
-            </div>
-            <div class="howimg2">
-                <img src="./img/asset 6.jpeg" alt="">
-                <div class="howimgword2">
-                    <a href="">
-                        <p>Adopt
-                    </a></p>
-                </div>
-            </div>
-            <div class="howimg3">
-                <img src="./img/asset 7.jpeg" alt="">
-                <div class="howimgword3">
-                    <a href="">
-                        <p>Sponsor
-                    </a></p>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    </div>
-
 
 
 </body>
