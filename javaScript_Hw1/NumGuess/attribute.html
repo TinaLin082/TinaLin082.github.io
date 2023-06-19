@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+    <h1 class="title" name="wick" onclick="test()">Title wick</h1>
+    <button num="1">1</button>
+    <button num="2">2</button>
+    <button num="3">3</button>
+    <button num="4">4</button>
+    <button num="5">5</button>
+    <button num="6">6</button>
+    <button num="7">7</button>
+    <button num="8">8</button>
+    <button num="9">9</button>
+    
+ 
+    <script>
+         const  wickTitle =document.querySelector('h1')
+        // let attrVal = wickTitle.getAttribute('name')
+        // console.log(attrVal);
+
+        // wickTitle.setAttribute('name2','myNameVal')
+        // console.log(wickTitle.getAttribute(name2))
+
+        //按哪一個按鈕，把button[num]拿出來
+        const btnGroup =document.querySelectorAll('button[num]')
+        btnGroup.forEach(function(item){
+            item.addEventListener('click',function(){
+                let val =item.getAttribute('num')
+                console.log(val)
+            })
+        })
+        
+        function test(){
+            console.log('click')
+            alert('click')
+        }
+    </script>
+</body>
+
+</html>
