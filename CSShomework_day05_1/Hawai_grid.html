@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./grid.css">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: YakuHanJP, '游ゴシック Medium', YuGothic, YuGothicM, 'Noto Sans Japanese', sans-serif;
+            color: #000;
+        }
+
+        .list-container {
+            max-width: 960px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+
+        .date {
+            font-size: 5px;
+            padding-top: 10px;
+        }
+
+        .text-title {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px;
+            box-sizing: border-box;
+            border-top: 1px solid #e0dede;
+            margin: 10px 10px;
+        }
+
+        .text-title h1 {
+            font-size: 20px;
+        }
+
+        .text-title span {
+            display: block;
+            color: #686868;
+            font-size: 10px;
+            font-weight: normal;
+        }
+
+        .text-title a {
+            color: rgb(245, 83, 50);
+            font-weight: 800;
+            font-size: 10px;
+        }
+
+        .container-block {
+            margin: auto;
+        }
+
+        .card-group {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .card{
+            padding: 10px;
+        }
+        .main-card {
+
+            box-sizing: border-box;
+        }
+
+        .main-card .card {
+            margin: auto;
+            /* padding: 15px; */
+        }
+
+        .main-card .card h2 {
+            font-size: 18px;
+            padding-bottom: 10px;
+        }
+
+        .main-card .card p {
+            font-size: 12px;
+            letter-spacing: 0.2em;
+        }
+
+        .main-card span {
+            font-size: 6px;
+            padding-left: 20px;
+
+        }
+
+        .cotent-block {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        .contain-card {
+            box-sizing: border-box;
+            padding: 10px 10px 10px 10px;
+            overflow: hidden;
+        }
+        .contain-card:nth-child(even){
+            padding: 10px 10px 10px 0px;
+        }
+
+        .contain-card a span {
+            display: flex;
+            align-items: center;
+            font-size: 6px;
+            padding-bottom: 8px;
+            white-space: nowrap;
+            height: 5%;
+        }
+
+        .contain-card p {
+            font-size: 6px;
+            font-weight: 600;
+        }
+
+        .contain-card img {
+            aspect-ratio: 3/2;
+            object-fit: cover;
+        }
+
+        @media screen and (min-width:768px) {
+            .list-container {
+                margin: auto;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .cotent-block {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .text-title {
+                padding: 0px;
+                margin: 20px 0px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                box-sizing: border-box;
+                border-top: 1px solid #e0dede;
+            }
+
+            .text-title h1 {
+                margin: 10px 0px;
+            }
+
+            .text-title span {
+                display: inline;
+                padding-left: 10px;
+            }
+
+            .contain-card img {
+                aspect-ratio: 3/2;
+                object-fit: cover;
+                border-radius: 5%;
+            }
+
+            .container-block {
+                display: flex;
+            }
+
+            .list-container:nth-child(even) .container-block {
+                flex-direction: row-reverse;
+            }
+
+            .list-container:nth-child(even) .text-title h1 {
+                padding-left: 10px;
+            }
+
+            .main-card span {
+                font-size: 6px;
+                padding-left: 0px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="list-group">
+        <div class="list-container">
+            <div class="text-title col-12 col-md-12 col-xl-12">
+                <h1>旅行者にできること<span>What Travelers Can Do</span></h1>
+                <a href="#">すべて見る</a>
+            </div>
+            <div class="container-block col-12 col-md-12 col-xl-12">
+                <div class="card-group col-12 col-md-6 col-xl-6 ">
+                    <div class="main-card">
+                        <a href="#">
+                            <img src="./img/maingroup.png" alt="">
+                            <div class="card">
+                                <h2>
+                                    今年もアースデーにビーチクリーンを開催！</h2>
+                                <p> 毎年4月22日は地球環境について考える日「アースデー」。
+                                    最近ではこの日だけでなく、4月をアース月間として世界中で環境保護活動が行われるようになりました。太平洋の
+                                </p>
+                                <div class="date">
+                                    2023.04.18
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="cotent-block col-12 col-md-6 col-xl-6">
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span>
+                                <img style="width: 20px;height: 20px;" src="./img/icon_eco.svg" alt="">
+                                エコ活動</span>
+                            <img src="./img/Hawaii.jpg" alt="">
+                            <p>【ハワイ島】海深914mから湧き出る海洋深層水の製塩所ツアーを体験！お土産に最適な12種類の絶品ハワイアンソルトも
+                            </p>
+                            <div class="date">
+                                2022.06.14
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span>
+                                <img style="width: 20px;height: 20px;" src="./img/icon_event.svg" alt="">
+                                イベント</span>
+                            <img src="./img/anniversary.jpg" alt="">
+                            <p>キング・カメハメハ・デー制定150周年記念イベント
+                            </p>
+                            <div class="date">
+                                2022.06.08
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span>
+                                <img style="width: 20px;height: 20px;" src="/img/icon_other.svg" alt="">
+                                その他</span>
+                            <img src="./img/UT1.jpg" alt="">
+                            <p>ユニクロ アラモアナ店〜UTme!限定デザイン「Together in Hawaii」シリーズでハワイフードバンクに寄付を〜
+                            </p>
+                            <div class="date">
+                                2022.01.28
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span>
+                                <img style="width: 20px;height: 20px;" src="/img/icon_culture.svg" alt="">
+                                カルチャー</span>
+                            <img src="./img/EUAP21.png" alt="">
+                            <p>
+                                「E Ulu A Paʻa」～ビショップ ミュージアム が年に一度のファンドレイジングを開催！～
+                            </p>
+                            <div class="date">
+                                2021.08.12
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-container">
+            <div class="text-title col-12 col-md-12 col-xl-12">
+                <h1>企業の取組み<span>Corporate Initiatives</span></h1>
+                <a href="#">すべて見る</a>
+            </div>
+            <div class="container-block col-12 col-md-12 col-xl-12">
+                <div class="card-group col-12 col-md-6 col-xl-6">
+                    <div class="main-card">
+                        <a href="#">
+                            <img src="./img/Group-photo.jpeg" alt="">
+                            <div class="card">
+                                <h2>
+                                    【チームJALハワイ】ビーチクリーンアップ活動で地元コミュニティに貢献！</h2>
+                                <p> JALハワイ支店とJALPAK International Hawaiiで構成された“チームJALハワイ”は、ハワイ州観光局が提唱する「マラマハワイ～ハワイを思
+                                </p>
+                                <div class="date">
+                                    2023.11.02
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="cotent-block col-12 col-md-6 col-xl-6">
+                    <div class="contain-card col-6">
+                        <a href="#">
+
+                            <img src="./img/people.jpg" alt="">
+                            <p>廃棄された漁網を服に生まれ変わらせる！海を守ろうと活動する人々が主役のドキュメンタリーを作るプロジェクトをサポートしませんか？
+                            </p>
+                            <div class="date">
+                                2022.07.27
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+
+                            <img src="./img/Malama-Honu-Malama-Honua_Pii.jpg" alt="">
+                            <p>第33回タートル・インディペンデンス・デイ開催
+                            </p>
+                            <div class="date">
+                                2022.07.01
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span>オラカイ株式会社</span>
+                            <img src="./img/farmer.jpg" alt="">
+                            <p>「シーアスパラガス」を生産している「オラカイ」のサステナブルな取り組み
+                            </p>
+                            <div class="date">
+                                2022.06.15
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span>ザ・リッツカールトン・レジデンス・ワイキキ</span>
+                            <img src="./img/view.jpg" alt="">
+                            <p>
+                                【ザ・リッツ・カールトン・レジデンス ワイキキビーチ】オアフ島内最大運河、アラワイ運河の浄化プロジェクト「ゲンキ・アラワイ・プロジェクト」の協力パートナーに
+                            </p>
+                            <div class="date">
+                                2021.06.14
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-container">
+            <div class="text-title col-12 col-md-12 col-xl-12">
+                <h1>ハワイ州観光局の取組み<span>Hawai‘i Tourism Japan Initiatives</span></h1>
+                <a href="#">すべて見る</a>
+            </div>
+            <div class="container-block col-12 col-md-12 col-xl-12">
+                <div class="card-group col-12 col-md-6 col-xl-6">
+                    <div class="main-card">
+                        <a href="#">
+                            <span>ハワイ州観光局</span>
+                            <img src="./img/ocean.tif.jpg" alt="">
+                            <div class="card">
+                                <h2>
+                                    マウイ郡、ハワイ島、海洋生物に影響与える日焼け止めの流通禁止を発表
+                                </h2>
+                                <p> 2022年10月1日からマウイ郡ノンミネラルの日焼け止めの流通・販売禁止条例を施行 マウイ郡の条例5306号により、2022年10月1日からマウイ島、ラナイ島、
+                                </p>
+                                <div class="date">
+                                    2022.12.02
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="cotent-block col-12 col-md-6 col-xl-6">
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span>ハワイ州観光局</span>
+                            <img src="./img/malama.jpeg" alt="">
+                            <p>TBSミニ番組　マラマ〜新しいハワイ旅〜
+                            </p>
+                            <div class="date">
+                                2022.10.01
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span>ハワイ州観光局</span>
+                            <img src="./img/girl.png" alt="">
+                            <p>ハワイ州観光局、マラマハワイリツイートキャンペーン第2弾を実施！～動画の楽曲を作詞された倉木麻衣さんのbillboard
+                                classics主催シンフォニックコンサート3公演を合計30組60名様にご招待！～
+                            </p>
+                            <div class="date">
+                                2022.06.06
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span>ハワイ州観光局</span>
+                            <img src="./img/tree.jpg" alt="">
+                            <p>ハワイ州観光局、モデルのローラさんをマラマハワイ・アンバサダーに任命
+                            </p>
+                            <div class="date">
+                                2022.04.22
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span> ハワイ州観光局</span>
+                            <img src="./img/MalamaMountain.jpg" alt="">
+                            <p>
+                                ハワイ州観光局、マラマハワイ動画のリツイートキャンペーンを実施～動画のために書き下ろした『Sea wind』が収録された倉木麻衣さんサイン入りCDを10名様に贈呈！～
+                            </p>
+                            <div class="date">
+                                2021.12.14
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-container">
+            <div class="text-title col-12 col-md-12 col-xl-12">
+                <h1>コミュニティの取り組み<span>Communitiy Initiatives</span></h1>
+                <a href="#">すべて見る</a>
+            </div>
+            <div class="container-block col-12 col-md-12 col-xl-12">
+                <div class="card-group col-12 col-md-6 col-xl-6">
+                    <div class="main-card">
+                        <a href="#">
+                            <img src="./img/takeout.jpg" alt="">
+                            <div class="card">
+                                <h2>
+                                    Zero Waste Oahu (ゼロウェイストオアフ) の取り組み
+                                </h2>
+                                <p> Zero Waste Oahuは現在の生産方法、購買システム、廃棄物管理システムに積極的に介入するシステムを通じて、バランスのとれた消費文化と廃棄物の少ない未来
+                                </p>
+                                <div class="date">
+                                    2022.07.20
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="cotent-block col-12 col-md-6 col-xl-6">
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span>サスティナブル・コーストラインズ・ハワ</span>
+                            <img src="./img/kaimuki.jpeg" alt="">
+                            <p>サスティナブル・コーストラインズ・ハワイ、第二回クリーンアップイベント「The Kaimukī Cleanup Festival 」に参加
+                            </p>
+                            <div class="date">
+                                2022.06.20
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span></span>
+                            <img src="./img/girl.png" alt="">
+                            <p>地上最古の海洋生物の一種であるウミガメ　彼らを絶滅の危機から保護する「マラマ イ ナ ホヌ」
+                            </p>
+                            <div class="date">
+                                2022.05.26
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span>アウトリガー・ホテルズ＆リゾーツ</span>
+                            <img src="./img/Hotel-Lobby-Art-Exhibition.jpg" alt="">
+                            <p>サステナブルなアートとファッションをテーマにしたイベント「THINK GLOBALLY, ACT LOCALLY」を開催
+                            </p>
+                            <div class="date">
+                                2022.04.23
+                            </div>
+                        </a>
+                    </div>
+                    <div class="contain-card col-6">
+                        <a href="#">
+                            <span> クプ・ハワイ（KUPU Hawaii）</span>
+                            <img src="./img/station.jpg" alt="">
+                            <p>
+                                次世代を支援するクプ・ハワイ、Hoʻokupu Centerの取り組み
+                            </p>
+                            <div class="date">
+                                2021.06.23
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
