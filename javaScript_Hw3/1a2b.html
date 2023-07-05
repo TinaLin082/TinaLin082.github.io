@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .Numouter {
+            text-align: center;
+            padding: 5px;
+        }
+
+        h1 {
+            color: #403d3d;
+        }
+
+        .hint {
+            margin: auto;
+            width: 400px;
+            height: 300px;
+            outline: 1px solid rgb(77, 188, 213);
+            align-self: center;
+            padding: 10px;
+            background-color: rgb(212, 234, 239);
+            color: #5b5858;
+            border-radius: 15px;
+        }
+
+        .btn-group {
+            margin: 10px;
+        }
+
+        button {
+            margin: 5px;
+            width: 80px;
+        }
+
+        input {
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Numouter">
+        <h1>1A2B</h1>
+        <input type="text" id="guess_input" onkeyup="value=value.replace(/[^\d]/g,'')" placeholder="請輸入4位數字"
+            maxlength="4">
+        <div class="hint"></div>
+        <div class="btn-group">
+            <button id="start_btn">開始</button>
+            <button id="guess_btn">猜</button>
+            <button id="restart_btn"> 重新開始</button>
+            <button id="show_answer_btn">看答案</button>
+        </div>
+    </div>
+
+    <script>
+        let numArray = [];
+        let record = [];
+        let a = 0, b = 0;
+
+        //宣告DOM
+        window.onload = function () {
+            const start = document.getElementById('start_btn')
+            const guessBtn = document.getElementById('guess_btn')
+            const restartBtn = document.getElementById('restart_btn')
+            const showAnswerBtn = document.querySelector('#show_answer_btn')
+            const guessInput = document.getElementById('guess_input')
+            const hintArea = document.querySelector('.hint')
+            //一開始鎖所有按鈕，只留start
+            showBtn(true);
+
+
+            start.addEventListener('click', function () {
+                //解放所有按鈕//產生亂數
+                showBtn(false)
+                randomfunction()
+                guessInput.focus();
+            })
+
+            restartBtn.addEventListener('click', function () {
+                guessInput.value = "";
+                hintArea.innerText = "";
+                randomfunction()
+            })
+
+            showAnswerBtn.addEventListener('click', function () {
+                alert(numArray.join(""));
+            })
+
+            guessBtn.addEventListener('click', function () {
+                //判斷不能重覆4個數字
+                console.log('guess', guessInput.value)
+                // start.disabled = true;
+
+                if (guessInput.value.length == 4 && !checkRepeatNum(guessInput.value)) {
+                    hintArea.innerText += guessAB(numArray.join(""), guessInput.value) + "\n";
+                    guessInput.value = "";
+
+                }
+
+                if (a == 4) {
+                    alert('Win!!!')
+                    hintArea.innerText = "";
+                    guessInput.value = "";
+                    showBtn(true);
+                }
+                guessInput.focus();
+            })
+
+            function checkRepeatNum(guessInput) {
+                //不能重覆4個數字
+                let checkNum = guessInput.toString().split('');
+                for (i = 0; i < guessInput.length; i++) {
+                    for (let j = i + 1; j < guessInput.length; j++) {
+                        if (guessInput[i] === guessInput[j]) {
+                            alert('請勿輸入重覆數字')
+                            return true; // 存在重复的数字
+                        }
+                    }
+                }
+                return false; // 没有重复的数字
+            }
+
+            function guessAB(answer, guess) {
+                a = 0;
+                b = 0;
+
+                for (let i = 0; i < numArray.length; i++) {
+                    if (answer[i] === guess[i]) {
+                        a++;
+                    }
+                    else if (answer.indexOf(guess[i]) !== -1) {
+                        b++;
+                    }
+                }
+                // record.push(`${guess}猜的數字:${a}A${b}B`);
+                return `${guess} : ${a}A${b}B`;
+
+            }
+
+            function randomfunction() {
+                numArray = [];
+                for (i = 0; numArray.length < 4; i++) {
+                    let randomNumber = Math.floor(Math.random() * 9) + 1;
+                    if (!numArray.includes(randomNumber)) {
+                        numArray.push(randomNumber);
+                    }
+                }
+                //numArray.join("");
+                console.log(numArray);
+                return numArray;
+            }
+            //鎖所有的按鈕
+            function showBtn(bl) {
+                guessBtn.disabled = bl
+                restartBtn.disabled = bl
+                showAnswerBtn.disabled = bl
+                guessInput.disabled = bl
+                // console.log('bl', bl);
+                start.disabled = !bl;
+            }
+        }
+
+    </script>
+
+
+</body>
+
+</html>
