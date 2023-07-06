@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="Apple.css">
+    <link rel="stylesheet" href="grid.css">
+
+</head>
+
+<body>
+    <div class="container col-12">
+        <div class="top-title col-12">
+            <div class="logo col-3">
+                <img src="/javaScript_Hw4/Apple/picture/apple.png" alt="">
+            </div>
+            <div class="btn-group col-9">
+                <button type="button" class="btn" name="IPad">iPad</button>
+                <button type="button" class="btn" name="IPhone">IPhone</button>
+                <button type="button" class="btn" name="MacAir">Mac</button>
+            </div>
+        </div>
+        <div class="main-title col-12">
+            <div class="main-text col-6">
+                <h1>購買iPad Air</h1>
+                <div class="hint-area" id="hint">
+                    NT$19,900
+                </div>
+            </div>
+            <div class="main-info">
+                <a href="#">透過換購，可獲享 NT$800 – NT$16,300 折抵優惠註腳**</a>
+                <a href="#">可選用零利率分期付款，最長可達 12月</a>
+            </div>
+        </div>
+        <div class="main-row col-12">
+            <div class="pic col-8">
+                <img id="ipadImg" src="./picture/ipad-default.png" alt="">
+            </div>
+            <div class="row-info col-4 ">
+                <div class="row-text">
+                    <h2>外觀。<span>挑選喜愛的顏色。</span></h2>
+                </div>
+                <div class="color-row col-12" id="colorArea">
+                </div>
+                <div class="row-text">
+                    <h2>儲存裝置。
+                        <span> 選擇需要的儲存空間大小。</span>
+                    </h2>
+                </div>
+                <div class="color-row" id="storageArea">
+                </div>
+                <div class="row-text">
+                    <h2>連線能力。
+                        <span>選擇連線方式。</span>
+                    </h2>
+                </div>
+                <div class="wifi-row" id="wifiArea">
+                </div>
+            </div>
+        </div>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+            crossorigin="anonymous"></script>
+
+        <script>
+
+            let applyData = {};
+
+            //宣告預設默認選擇值
+            let defaultWifiType = 'Wi-Fi';
+            let defaultStorageType = '64GB';
+            let defaultApplyType = 'IPad';
+
+            window.onload = async function () {
+
+                await getData();
+                bindColor();
+                bindStorage();
+                bindWifi();
+
+
+                function bindMoney() {
+                    let radioButtons = document.getElementsByName("Wi-Fi_info");
+                    console.log('radio', radioButtons);
+
+                    for (let i = 0; i < radioButtons.length; i++) {
+                        //被選擇到的
+                        if (radioButtons[i].checked) {
+                            //取價格(下面塞的屬性)
+                            document.getElementById("hint").innerHTML = "NT$" + radioButtons[i].getAttribute("hint");;
+
+                        }
+                    }
+                }
+
+                function bindWifi() {
+                    //取得ipad的資料，驗證有沒有值
+                    console.log('bindWifi', applyData.IPad.price);
+
+                    //要塞資料到wifiArea的下面，先取得id
+                    const WifiArea = document.getElementById('wifiArea')
+                    WifiArea.innerHTML = '';
+
+                    let tempWifi = applyData.IPad.price;
+                    console.log('defaultStorageType', defaultStorageType);
+                    //過濾預設值
+                    let wifi = tempWifi.filter(x => x.storage == defaultStorageType);
+                    console.log('wifi', wifi);
+
+                    for (let index = 0; index < wifi.length; index++) {
+
+                        let radiobox = document.createElement('input');
+                        radiobox.type = 'radio';
+                        radiobox.id = `wifi${index}`;
+                        radiobox.name = 'Wi-Fi_info';
+
+                        //塞一個屬性在input裡面，容易取值(price在下面兩層)
+                        radiobox.setAttribute('hint', wifi[index].price);
+
+                        if (wifi[index].network == defaultWifiType) {
+                            radiobox.checked = true;
+                        }
+
+                        radiobox.addEventListener('click', function () {
+                            //切換GB  預設值改變
+                            defaultWifiType = wifi[index].network
+                            bindMoney()
+                        })
+
+                        let label = document.createElement('label');
+                        //設定屬性，前面是屬性名稱，後面是值(要跟input id對應)
+                        label.setAttribute('for', `wifi${index}`);
+
+                        let text = document.createElement('div');
+                        text.setAttribute('class', 'text');
+
+                        let span = document.createElement('span');
+                        span.textContent = `${wifi[index].network}`
+
+                        let p = document.createElement('p');
+                        p.innerHTML = `${wifi[index].dis.replace(/\n/g, '<br>')}`
+
+                        let price = document.createElement('div');
+                        price.setAttribute('class', 'price');
+                        let p1 = document.createElement('p')
+                        p1.textContent = `NT$${wifi[index].price}起`
+
+    
+                        WifiArea.appendChild(radiobox) //input
+                        let z = WifiArea.appendChild(label).appendChild(text)
+
+                        text.appendChild(span)
+                        text.appendChild(p);
+
+                        label.appendChild(price)
+                        price.appendChild(p1);
+                    }
+                    bindMoney();
+                }
+
+                function bindStorage() {
+                
+                    console.log('bindStorage', applyData.IPad.price);
+ 
+                    const storageArea = document.getElementById('storageArea')
+                    storageArea.innerHTML = '';
+
+                    
+                    let tempStorage = applyData.IPad.price;
+                    //過濾
+                    let storage = tempStorage.filter(x => x.network == defaultWifiType);
+
+                    console.log('bindStorage storage', storage);
+                    for (let index = 0; index < storage.length; index++) {
+                        console.log(storage[index]);
+
+                        //先建立input
+                        let radiobox = document.createElement('input');
+                        radiobox.type = 'radio';
+                        radiobox.id = `price${index}`;
+                        radiobox.name = 'GB';
+
+                        //設置默認選取
+                        if (storage[index].storage == defaultStorageType) {
+                            radiobox.checked = true;
+                        }
+                        radiobox.addEventListener('click', function () {
+                            //切換GB  預設值改變
+                            defaultStorageType = storage[index].storage
+                            //重新刷新價格(選到256 or 64 GB)
+                            bindWifi();
+                            bindMoney()
+                        })
+
+                  
+                        let label = document.createElement('label');
+                      
+                        label.setAttribute('for', `price${index}`);
+
+                        let text = document.createElement('div');
+                        text.setAttribute('class', 'text');
+
+                 
+                        let span = document.createElement('span');
+                        span.textContent = `${storage[index].storage}`
+
+                        let p = document.createElement('p');
+                        p.textContent = `NT$${storage[index].price}起`
+
+                     
+                        storageArea.appendChild(radiobox)
+                        let x = storageArea.appendChild(label).appendChild(text)
+                        text.appendChild(span)
+                        text.appendChild(p);
+                    }
+                }
+
+                function bindColor() {
+                    //取得ipad的資料，驗證有沒有值
+                    console.log('bindColor', applyData.IPad.outer);
+                    //要塞資料到colorArea的下面，先取得id
+                    const colorArea = document.getElementById('colorArea')
+                    colorArea.innerHTML = '';
+                    console.log('colorArea', colorArea);
+
+                    //取得Json中的外觀資料，物件包陣列，取得到陣列(index)後就可跑迴圈
+                    let color = applyData.IPad.outer;
+                    for (let index = 0; index < color.length; index++) {
+                        console.log(color[index]);
+
+                        //先建立input
+                        let radiobox = document.createElement('input');
+                        radiobox.type = 'radio';
+                        //取名outer當變數 index不會抓到其他重覆的[0,1,2...]
+                        radiobox.id = `outer${index}`;
+                        radiobox.name = 'color';
+                        //監聽單一元素，在創的時候監聽
+                        radiobox.addEventListener('click', function () {
+                            let ipadImg = document.getElementById('ipadImg');
+                            ipadImg.src = `${color[index].imageUrl}`
+                        })
+                        //也可以用setAttribute做
+                        // radiobox.setAttribute('name','color')
+
+                        //先建立label  
+                        let label = document.createElement('label');
+                        //設定屬性，前面是屬性名稱，後面是值
+                        label.setAttribute('for', `outer${index}`);
+                        label.setAttribute('class', `ipad-gray`);
+                        label.setAttribute('col-3', "");
+
+                        //建立img，找來源圖，從Json中的pic
+                        let img = document.createElement('img');
+                        img.src = `${color[index].pic}`;
+
+                        //建立span，塞文字，從Json中的color
+                        let span = document.createElement('span');
+                        span.textContent = `${color[index].color}`
+
+                        //因為input、label並行，所以沒辦法往後append
+                        //img、span在label裡面，所以給label變數，(span、label並行)
+                        colorArea.appendChild(radiobox)
+                        let y = colorArea.appendChild(label)
+                        y.appendChild(img)
+                        y.appendChild(span);
+                    }
+                }
+
+                //取得json
+                async function getData() {
+                    const response = await fetch('./AppleInfo.json');
+                    applyData = await response.json();
+                    console.log('init', applyData);
+                }
+            }
+
+       
+        </script>
+</body>
+
+</html>

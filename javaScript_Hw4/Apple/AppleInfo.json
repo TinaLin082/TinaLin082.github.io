@@ -1,0 +1,97 @@
+{    
+
+"IPad": {
+    "detail": {
+        "productName": "iPad Air",
+        "baseImgUrl": "./picture/ipad-default.png"
+    },
+
+    "outer":
+        [{ "color": "太空灰", "colorValue": "#6e6969", "imageUrl": "./picture/gray.jpg" ,"pic":"./picture/gray-point.png"},
+        { "color": "藍色", "colorValue": "#b9aeae", "imageUrl": "./picture/blue.jpg" ,"pic":"./picture/blue-point.png"},
+        { "color": "粉紅色", "colorValue": "#ceb7a8", "imageUrl": "./picture/pink.jpg"  ,"pic":"./picture/pink-point.png" },
+        { "color": "紫色", "colorValue": "#ceb7a8", "imageUrl": "./picture/purple.jpg" ,"pic":"./picture/purple-point.png" },
+        { "color": "星光色", "colorValue": "#ceb7a8", "imageUrl": "./picture/starlight.jpg" ,"pic":"./picture/starlight-point.png" }],
+
+    "price": 
+        [{"storage": "64GB","network": "Wi-Fi", "price": 19900,"dis":"每部 iPad 都可連接到 Wi-Fi 網路\r\n，使你能保持連線。" },
+        {"storage": "64GB","network": "Wi-Fi+Cellular", "price": 24900,"dis":"Wi-Fi + 行動網路機型讓你在無法\r\n使用 Wi-Fi 時也能進行連線。"},
+        {"storage": "256GB","network": "Wi-Fi", "price": 24900,"dis":"每部 iPad 都可連接到 Wi-Fi 網路\r\n，使你能保持連線。" },
+        {"storage": "256GB","network": "Wi-Fi+Cellular", "price": 29900,"dis":"Wi-Fi + 行動網路機型讓你在無法\r\n使用 Wi-Fi 時也能進行連線。"}]
+   
+},
+    "IPhone": {
+        "detail": {
+            "productName": "iPhone 14",
+            "baseImgUrl": "'./picture/iphone-default.png"
+        },
+      
+        "outer": 
+            [{ "color": "黑色", "colorValue": "#000000", "imageUrl": "./picture/iphone-black.png" ,"pic":"black.png"},
+            { "color": "黃色", "colorValue": "#000000", "imageUrl": "./picture/iphone-yellow.png" ,"pic":"星光色01.jpg"},
+            { "color": "紅色", "colorValue": "#000000", "imageUrl": "./picture/iphone-red.png","pic":"red.png" }],
+      
+        "price":            
+            [{"style":"14", "storage": "64GB", "price": 24900 },
+            { "style":"14", "storage": "128GB", "price": 26900 },
+            { "style":"14", "storage": "256GB", "price": 30400 },
+            { "style":"14 Plus", "storage": "64GB", "price": 31900 },
+            { "style":"14 Plus", "storage": "128GB", "price": 35400 },
+            { "style":"14 Plus", "storage": "256GB", "price": 42400 }]
+            
+    },
+    
+   
+    
+    "MacAir": {
+        "detail": {
+            "productName": "MacPro",
+            "baseImgUrl": "./picture/macPro-default.png"
+        },
+
+        "outer": 
+            [{ "color": "太空灰色", "colorValue": "#6e6969", "imageUrl": "./picture/macPro-gray.png" ,"pic":"macPro-gray.png"},
+             { "color": "銀色", "colorValue": "#b9aeae", "imageUrl": "./picture/macPro-silver.png" ,"pic":"macPro-silver.png"}],
+        
+        "price": 
+            [{ "ram": "8GB", "storage": "256GB", "price": 35900 , "power":"30W USB-C 電源轉接器"},
+             { "ram": "8GB", "storage": "512GB", "price": 41900 , "power":"30W USB-C 電源轉接器"},
+             { "ram": "8GB", "storage": "1TB", "price": 47900 , "power":"30W USB-C 電源轉接器"},
+             { "ram": "8GB", "storage": "2TB", "price": 59900 , "power":"30W USB-C 電源轉接器"},             
+             { "ram": "8GB", "storage": "256GB", "price": 36500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},
+             { "ram": "8GB", "storage": "512GB", "price": 42500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},
+             { "ram": "8GB", "storage": "1TB", "price": 48500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},
+             { "ram": "8GB", "storage": "2TB", "price": 60500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},             
+             { "ram": "8GB", "storage": "256GB", "price": 36500 , "power":"70W USB-C 電源轉接器"},
+             { "ram": "8GB", "storage": "512GB", "price": 42500 , "power":"70W USB-C 電源轉接器"},
+             { "ram": "8GB", "storage": "1TB", "price": 48500 , "power":"70W USB-C 電源轉接器"},
+             { "ram": "8GB", "storage": "2TB", "price": 60500 , "power":"70W USB-C 電源轉接器"},
+
+             { "ram": "16GB", "storage": "256GB", "price": 41900 , "power":"30W USB-C 電源轉接器"},
+             { "ram": "16GB", "storage": "512GB", "price": 47900 , "power":"30W USB-C 電源轉接器"},
+             { "ram": "16GB", "storage": "1TB", "price": 53900 , "power":"30W USB-C 電源轉接器"},
+             { "ram": "16GB", "storage": "2TB", "price": 65900 , "power":"30W USB-C 電源轉接器"},
+             { "ram": "16GB", "storage": "256GB", "price": 42500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},
+             { "ram": "16GB", "storage": "512GB", "price": 48500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},
+             { "ram": "16GB", "storage": "1TB", "price": 54500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},
+             { "ram": "16GB", "storage": "2TB", "price": 66500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},
+             { "ram": "16GB", "storage": "256GB", "price": 42500 , "power":"70W USB-C 電源轉接器"},
+             { "ram": "16GB", "storage": "512GB", "price": 48500 , "power":"70W USB-C 電源轉接器"},
+             { "ram": "16GB", "storage": "1TB", "price": 54500 , "power":"70W USB-C 電源轉接器"},
+             { "ram": "16GB", "storage": "2TB", "price": 66500 , "power":"70W USB-C 電源轉接器"},
+
+             { "ram": "24GB", "storage": "256GB", "price": 47900 , "power":"30W USB-C 電源轉接器"},
+             { "ram": "24GB", "storage": "512GB", "price": 53900 , "power":"30W USB-C 電源轉接器"},
+             { "ram": "24GB", "storage": "1TB", "price": 59900 , "power":"30W USB-C 電源轉接器"},
+             { "ram": "24GB", "storage": "2TB", "price": 71900 , "power":"30W USB-C 電源轉接器"},
+             { "ram": "24GB", "storage": "256GB", "price": 58500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},
+             { "ram": "24GB", "storage": "512GB", "price": 54500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},
+             { "ram": "24GB", "storage": "1TB", "price": 60500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},
+             { "ram": "24GB", "storage": "2TB", "price": 72500 , "power":"35W 雙 USB-C 埠小型電源轉接器"},
+             { "ram": "24GB", "storage": "256GB", "price": 58500 , "power":"70W USB-C 電源轉接器"},
+             { "ram": "24GB", "storage": "512GB", "price": 54500 , "power":"70W USB-C 電源轉接器"},
+             { "ram": "24GB", "storage": "1TB", "price": 60500 , "power":"70W USB-C 電源轉接器"},
+             { "ram": "24GB", "storage": "2TB", "price": 72500 , "power":"70W USB-C 電源轉接器"}]
+        
+    }
+}
