@@ -1,0 +1,161 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container_box {
+    margin: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    padding: 0;
+    background-color: rgb(243, 243, 243);
+}
+
+.nav-head {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100px;
+    background-color: #fff;
+    /* 调整此处的数值来改变图片高度 */
+}
+.dropdown-item img{
+    background-color:transparent;
+}
+
+.nav {
+    width: 100%;
+    background-color: #fff;
+    justify-content: right;
+    align-items: center;
+}
+
+.dropdown-toggle::after {
+    display: none;
+    /* 隐藏默认的三角形图标 */
+}
+
+.dropdown-menu li {
+    width: 100%;
+    padding: 5px 15px 5px 10px;
+    margin: 5px;
+}
+
+.dropdown-menu a {
+    padding: 0;
+}
+
+.dropdown-menu hr {
+    border-top: 1px solid #aaa;
+    margin: 5px;
+}
+
+.dropdown-item i {
+    float: right;
+}
+
+.dropdown-item img {
+    width: 25%;
+    margin: 5px;
+}
+
+
+.input_container {
+    width: 100%;
+    padding: 40px 40px 0px 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input_container h2 {
+    width: 100%;
+    display: block;
+}
+
+.input-group {
+    font-size: 13px;
+    padding-top: 10px;
+}
+
+.btn {
+    color: #fff;
+}
+
+.list-data {
+    /* display: flex;
+    flex-wrap: wrap; */
+    padding: 40px 40px 0px 40px;
+    box-sizing: border-box;
+    margin: auto;
+}
+
+hr {
+    border-top: 1px dashed #ff5537;
+    border-bottom: none;
+}
+
+.navbar_container {
+    width: 100%;
+    padding: 40px 40px 20px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+
+.navbar_container h2 {
+    width: 100%;
+    display: block;
+}
+
+.navbar_container .nav-item {
+    height: 2px;
+    left: 0px;
+    width: 190px;
+}
+
+.navbar_container a {
+    display: flex;
+    justify-content: center;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+    color: #ff5537;
+    background-color: #fff;
+    font-size: 15px;
+    border-radius: 0;
+    border-bottom: 2px solid #ff5537;
+}
+.nav-link{
+    color: black;
+}
+
+.dataContent {
+    padding: 12px;
+    box-sizing: border-box;
+}
+
+.dataContent h6 {
+    color: #ff5537;
+    font-weight: 500;
+}
+
+.dataContent span.show {
+    color: #ff5537;
+    display: flex;
+    justify-content: center;
+}
+
+.data_card {
+    background-color: #fff;
+    padding: 15px;
+}
